@@ -99,21 +99,21 @@ class Cyndy_Project_List extends WP_Widget {
     $category     = isset( $instance['category'] ) ? esc_attr($instance['category']) : '';
     $two_cols     = isset( $instance['two_cols'] ) ? $instance['two_cols'] : false;
 
-    $services = new WP_Query( array(
+    $projects = new WP_Query( array(
       'no_found_rows'       => true,
       'post_status'         => 'publish',
-      'post_type'       => 'services',
+      'post_type'       => 'projects',
       'posts_per_page'    => $number,
       'category_name'     => $category      
     ) );
 
     echo $args['before_widget'];
 
-    if ($services->have_posts()) :
+    if ($projects->have_posts()) :
 ?>
       <?php if ( $title ) echo $before_title . $title . $after_title; ?>
 
-          <?php while ( $services->have_posts() ) : $services->the_post(); ?>
+          <?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
             <?php $icon = get_post_meta( get_the_ID(), 'wpcf-service-icon', true ); ?>
             <?php $link = get_post_meta( get_the_ID(), 'wpcf-service-link', true ); ?>
             <?php if ( !$two_cols ) : ?>
