@@ -124,7 +124,7 @@ class Cyndy_Project_List extends WP_Widget {
               <div class="roll-icon-box">
                 <?php if ( has_post_thumbnail() ) : ?>
                   <div class="service-thumb">
-                    <?php the_post_thumbnail('sydney-service-thumb'); ?>
+                    <?php the_post_thumbnail('cyndy-project-thumb'); ?>
                   </div>
                 <?php elseif ($icon) : ?>     
                   <div class="icon">
