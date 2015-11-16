@@ -57,20 +57,20 @@ class Cyndy_Project_List extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get( 'alloptions', 'options' );
-    if ( isset($alloptions['sydney_services']) )
-      delete_option('sydney_services');     
+    if ( isset($alloptions['cyndy_projects']) )
+      delete_option('cyndy_projects');
       
     return $instance;
   }
   
   function flush_widget_cache() {
-    wp_cache_delete('sydney_services', 'widget');
+    wp_cache_delete('cyndy_projects', 'widget');
   }
   
   function widget($args, $instance) {
     $cache = array();
     if ( ! $this->is_preview() ) {
-      $cache = wp_cache_get( 'sydney_services', 'widget' );
+      $cache = wp_cache_get( 'cyndy_projects', 'widget' );
     }
 
     if ( ! is_array( $cache ) ) {
@@ -161,7 +161,7 @@ class Cyndy_Project_List extends WP_Widget {
 
     if ( ! $this->is_preview() ) {
       $cache[ $args['widget_id'] ] = ob_get_flush();
-      wp_cache_set( 'sydney_services', $cache, 'widget' );
+      wp_cache_set( 'cyndy_projects', $cache, 'widget' );
     } else {
       ob_end_flush();
     }
