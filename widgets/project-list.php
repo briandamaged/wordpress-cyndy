@@ -26,21 +26,21 @@ class Cyndy_Project_List extends WP_Widget {
     $two_cols     = isset( $instance['two_cols'] ) ? (bool) $instance['two_cols'] : false;
   ?>
 
-  <p><?php _e('In order to display this widget, you must first add some services from your admin area.', 'sydney'); ?></p>
+  <p><?php _e('In order to display this widget, you must first add some projects from your admin area.', 'sydney'); ?></p>
   <p>
   <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sydney'); ?></label>
   <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
   </p>
-  <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of services to show (-1 shows all of them):', 'sydney' ); ?></label>
+  <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of projects to show (-1 shows all of them):', 'sydney' ); ?></label>
   <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
-    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('The URL for your button [In case you want a button below your services block]', 'sydney'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('The URL for your button [In case you want a button below your projects block]', 'sydney'); ?></label>
   <input class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'see_all' ); ?>" name="<?php echo $this->get_field_name( 'see_all' ); ?>" type="text" value="<?php echo $see_all; ?>" size="3" /></p> 
-    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('The text for the button [Defaults to <em>See all our services</em> if left empty]', 'sydney'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('The text for the button [Defaults to <em>See all our projects</em> if left empty]', 'sydney'); ?></label>
   <input class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'see_all_text' ); ?>" name="<?php echo $this->get_field_name( 'see_all_text' ); ?>" type="text" value="<?php echo $see_all_text; ?>" size="3" /></p>
-  <p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show all services.', 'sydney' ); ?></label>
+  <p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show all projects.', 'sydney' ); ?></label>
   <input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>" type="text" value="<?php echo $category; ?>" size="3" /></p>
   <p><input class="checkbox" type="checkbox" <?php checked( $two_cols ); ?> id="<?php echo $this->get_field_id( 'two_cols' ); ?>" name="<?php echo $this->get_field_name( 'two_cols' ); ?>" />
-  <label for="<?php echo $this->get_field_id( 'two_cols' ); ?>"><?php _e( 'Display services in two columns instead of three?', 'sydney' ); ?></label></p>
+  <label for="<?php echo $this->get_field_id( 'two_cols' ); ?>"><?php _e( 'Display projects in two columns instead of three?', 'sydney' ); ?></label></p>
 
   <?php
   }
@@ -150,7 +150,7 @@ class Cyndy_Project_List extends WP_Widget {
             <?php if ($see_all_text) : ?>
               <?php echo $see_all_text; ?>
             <?php else : ?>
-              <?php echo __('See all our services', 'sydney'); ?>
+              <?php echo __('See all our projects', 'sydney'); ?>
             <?php endif; ?>
           </a>
         <?php endif; ?>       
