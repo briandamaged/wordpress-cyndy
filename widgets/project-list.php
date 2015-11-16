@@ -114,8 +114,8 @@ class Cyndy_Project_List extends WP_Widget {
       <?php if ( $title ) echo $before_title . $title . $after_title; ?>
 
           <?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
-            <?php $icon = get_post_meta( get_the_ID(), 'wpcf-service-icon', true ); ?>
-            <?php $link = get_post_meta( get_the_ID(), 'wpcf-service-link', true ); ?>
+            <?php $icon = get_post_meta( get_the_ID(), 'wpcf-project-icon', true ); ?>
+            <?php $link = get_post_meta( get_the_ID(), 'wpcf-project-link', true ); ?>
             <?php if ( !$two_cols ) : ?>
             <div class="service col-md-4">
             <?php else : ?>
