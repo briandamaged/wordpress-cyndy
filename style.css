@@ -11,3 +11,8 @@
  Tags:         light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
  Text Domain:  cyndy
 */
+
+.hentry .title-post {
+  font-size: 2.2em;
+  margin-left: -1em;
+}
