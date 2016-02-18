@@ -14,5 +14,14 @@
 
 .hentry .title-post {
   font-size: 2.0em;
-  margin-left: -1em;
+  margin-left: -0.5em;
+}
+
+
+@media only screen and (max-width: 780px) {
+
+  .hentry .title-post {
+    margin-left: 0px;
+  }
+
 }
